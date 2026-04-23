@@ -3,9 +3,20 @@ import { Link } from "expo-router";
 
 const SignIn = () => {
   return (
-    <View>
-      <Text>SignIn</Text>
-      <Link href="/(auth)/sign-up">Create Account</Link>
+    <View accessible={true}>
+      <Text
+        accessibilityRole="header"
+        accessibilityLabel="Sign in to your account"
+      >
+        SignIn
+      </Text>
+      <Link
+        href="/(auth)/sign-up"
+        accessibilityRole="link"
+        accessibilityLabel="Create account, navigates to sign up"
+      >
+        Create Account
+      </Link>
     </View>
   );
 };
